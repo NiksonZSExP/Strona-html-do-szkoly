@@ -37,7 +37,7 @@ Tutaj tabela z nazwiskiem <br>
           <td> dwa </td>
           <td> trzy </td>
      </tr>
-
+</table>
 
 
 
@@ -70,189 +70,99 @@ Tutaj tabela z nazwiskiem <br>
                  <TD COLSPAN=2 ALIGN=CENTER> center </TD>  
                  <TD> nic</TD> 
      </TR> 
-
+</table>
 
      
 <h2> przyklad 2 </h2>
 
 
-<style>
-    .gpu-table {
-        width: 100%;
-        max-width: 1050px;
-        margin: 30px auto;
-        border-collapse: collapse;
-        font-family: Georgia, "Times New Roman", serif;
-        text-align: center;
-        border: 3px solid #ff1744;
-        color: white;
-    }
+<table style="border:3px solid #ff1744; border-collapse:collapse; width:80%; text-align:center; font-family:Georgia;">
 
-    .gpu-table th,
-    .gpu-table td {
-        border: 3px solid #ff1744;
-        padding: 10px 8px;
-        font-weight: bold;
-    }
-
-    /* Główny nagłówek */
-    .gpu-table .main-header {
-        background-color: #17365d;
-        color: white;
-        font-size: 25px;
-        padding: 12px;
-    }
-
-    /* Nagłówki kolumn */
-    .gpu-table thead tr:nth-child(2) th {
-        background-color: #39c9c4;
-        color: #c52642;
-        font-size: 19px;
-    }
-
-    /* Wiersze z danymi */
-    .gpu-table tbody td {
-        background-color: #351b22;
-        font-size: 17px;
-    }
-
-    /* Nazwy kart graficznych */
-    .gpu-table tbody td:first-child {
-        color: #00d69a;
-        text-align: left;
-    }
-
-    /* Statusy */
-    .gpu-table .status {
-        color: #55d8d4;
-    }
-
-    /* Dolny nagłówek */
-    .gpu-table tfoot th {
-        background-color: #17365d;
-        color: white;
-        font-size: 21px;
-        padding: 12px;
-    }
-
-    /* Dostosowanie do telefonów */
-    @media (max-width: 700px) {
-        .gpu-table {
-            font-size: 13px;
-        }
-
-        .gpu-table th,
-        .gpu-table td {
-            padding: 6px 4px;
-            border-width: 2px;
-        }
-
-        .gpu-table .main-header {
-            font-size: 18px;
-        }
-
-        .gpu-table thead tr:nth-child(2) th {
-            font-size: 13px;
-        }
-
-        .gpu-table tbody td {
-            font-size: 12px;
-        }
-    }
-</style>
-
-<table class="gpu-table">
     <thead>
-        <tr>
-            <th class="main-header" colspan="7">
-                Dane Komputerowe – Nikodem Rolski 1P grupa 2
-            </th>
+        <tr style="background-color:#17365d; color:white; font-size:25px;">
+            <th colspan="7">Dane Komputerowe – Nikodem Rolski 1P grupa 2</th>
         </tr>
-        <tr>
-            <th>Model</th>
-            <th>Pamięć VRAM</th>
-            <th>Typ pamięci</th>
-            <th>Taktowanie</th>
-            <th>Szyna pamięci</th>
-            <th>Cena</th>
-            <th>Status</th>
+
+        <tr style="background-color:#39c9c4; color:#c52642; font-size:19px;">
+            <th style="border:3px solid #ff1744;">Model</th>
+            <th style="border:3px solid #ff1744;">Pamięć VRAM</th>
+            <th style="border:3px solid #ff1744;">Typ Pamięci</th>
+            <th style="border:3px solid #ff1744;">Taktowanie</th>
+            <th style="border:3px solid #ff1744;">Szyna pamięci</th>
+            <th style="border:3px solid #ff1744;">Cena</th>
+            <th style="border:3px solid #ff1744;">Status</th>
         </tr>
     </thead>
 
     <tbody>
-        <tr>
-            <td>RTX 3060</td>
-            <td>12 GB</td>
-            <td>GDDR6</td>
-            <td>1777 MHz</td>
-            <td>192-bit</td>
-            <td>900 zł</td>
-            <td class="status">Stara</td>
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RTX 3060</td>
+            <td style="border:3px solid #ff1744;">12 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR6</td>
+            <td style="border:3px solid #ff1744;">1777 MHz</td>
+            <td style="border:3px solid #ff1744;">192-bit</td>
+            <td style="border:3px solid #ff1744;">900 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Stara</td>
         </tr>
-        <tr>
-            <td>RTX 4060 Ti</td>
-            <td>8 GB</td>
-            <td>GDDR6</td>
-            <td>2535 MHz</td>
-            <td>128-bit</td>
-            <td>1600 zł</td>
-            <td class="status">Stara</td>
+
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RTX 4060 Ti</td>
+            <td style="border:3px solid #ff1744;">8 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR6</td>
+            <td style="border:3px solid #ff1744;">2535 MHz</td>
+            <td style="border:3px solid #ff1744;">128-bit</td>
+            <td style="border:3px solid #ff1744;">1600 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Stara</td>
         </tr>
-        <tr>
-            <td>RTX 5070</td>
-            <td>12 GB</td>
-            <td>GDDR7</td>
-            <td>2517 MHz</td>
-            <td>192-bit</td>
-            <td>2500 zł</td>
-            <td class="status">Nowa</td>
+
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RTX 5070</td>
+            <td style="border:3px solid #ff1744;">12 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR7</td>
+            <td style="border:3px solid #ff1744;">2517 MHz</td>
+            <td style="border:3px solid #ff1744;">192-bit</td>
+            <td style="border:3px solid #ff1744;">2500 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Nowa</td>
         </tr>
-        <tr>
-            <td>RX 7600</td>
-            <td>8 GB</td>
-            <td>GDDR6</td>
-            <td>2655 MHz</td>
-            <td>128-bit</td>
-            <td>1100 zł</td>
-            <td class="status">Stara</td>
+
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RX 7600</td>
+            <td style="border:3px solid #ff1744;">8 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR6</td>
+            <td style="border:3px solid #ff1744;">2655 MHz</td>
+            <td style="border:3px solid #ff1744;">128-bit</td>
+            <td style="border:3px solid #ff1744;">1100 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Stara</td>
         </tr>
-        <tr>
-            <td>RX 7700 XT</td>
-            <td>12 GB</td>
-            <td>GDDR6</td>
-            <td>2544 MHz</td>
-            <td>192-bit</td>
-            <td>1900 zł</td>
-            <td class="status">Stara</td>
+
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RX 7700 XT</td>
+            <td style="border:3px solid #ff1744;">12 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR6</td>
+            <td style="border:3px solid #ff1744;">2544 MHz</td>
+            <td style="border:3px solid #ff1744;">192-bit</td>
+            <td style="border:3px solid #ff1744;">1900 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Stara</td>
         </tr>
-        <tr>
-            <td>RX 7800 XT</td>
-            <td>12 GB</td>
-            <td>GDDR6</td>
-            <td>2430 MHz</td>
-            <td>256-bit</td>
-            <td>2200 zł</td>
-            <td class="status">Stara</td>
+
+        <tr style="background-color:#351b22; color:white; font-size:17px; font-weight:bold;">
+            <td style="color:#00d69a; text-align:left; border:3px solid #ff1744;">RX 7800 XT</td>
+            <td style="border:3px solid #ff1744;">12 GB</td>
+            <td style="border:3px solid #ff1744;">GDDR6</td>
+            <td style="border:3px solid #ff1744;">2430 MHz</td>
+            <td style="border:3px solid #ff1744;">256-bit</td>
+            <td style="border:3px solid #ff1744;">2200 zł</td>
+            <td style="color:#55d8d4; border:3px solid #ff1744;">Stara</td>
         </tr>
     </tbody>
 
     <tfoot>
-        <tr>
-            <th colspan="7">Dane Komputerowe</th>
+        <tr style="background-color:#17365d; color:white; font-size:21px;">
+            <th colspan="7" style="border:3px solid #ff1744;">Dane Komputerowe</th>
         </tr>
     </tfoot>
+
 </table>
 
-
-     
-</table> 
-
-
-
-
-
-
-
-          
      </body> 
 </html>
