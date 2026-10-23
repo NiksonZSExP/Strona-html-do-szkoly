@@ -12,13 +12,166 @@
 <br><br><br>
 Tutaj będzie formularz <br>
 
-[formularz]
+[formularz] <br>
 
 
+zobaczmy <br> 
 
-<!-- <A href ="Plik_z_nazwiskiem_do_ściągnięcia.zip">k&nbsp;l&nbsp;i&nbsp;k&nbsp; aby ściągnąć plik</A> <br> -->
 
-<!-- <img src="poczta.gif" border=2 width=70 height=60> … </A> -->
+<!-- Ai Formularz Artema --> 
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+          
+<h1>Formularz rejestracji do Szkolnego Klubu Programistycznego</h1>
+    <form id="registrationForm" action="mailto:mkryniew@ids.gda.pl?subject=Proskura" method="post" enctype="text/plain">
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Dane uczestnika</legend>
+                        <label class="text-field" for="imie">
+                            <span>Imię *</span>
+                            <input id="imie" name="imie" type="text" required>
+                        </label>
+                        <label class="text-field" for="nazwisko">
+                            <span>Nazwisko *</span>
+                            <input id="nazwisko" name="nazwisko" type="text" value="Proskura" required>
+                        </label>
+                        <label class="text-field" for="pseudonim">
+                            <span>Pseudonim</span>
+                            <input id="pseudonim" name="pseudonim" type="text" maxlength="20">
+                        </label>
+                        <label class="text-field" for="haslo">
+                            <span>Hasło *</span>
+                            <input id="haslo" name="haslo" type="password" required>
+                        </label>
+                        <label class="text-field" for="miejscowosc">
+                            <span>Miejscowość</span>
+                            <input id="miejscowosc" name="miejscowosc" type="text">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Wybór kategorii</legend>
+                        <label for="klasa">Klasa</label>
+                        <select id="klasa" name="klasa">
+                            <option value="1P_2" selected>1P_2</option>
+                            <option value="1P_1">1P_1</option>
+                            <option value="1P_3">1P_3</option>
+                            <option value="2P_1">2P_1</option>
+                            <option value="2P_2">2P_2</option>
+                        </select>
+                        <label for="system">System operacyjny</label>
+                        <select id="system" name="system">
+                            <option value="windows">Windows</option>
+                            <option value="linux">Linux</option>
+                            <option value="macos">macOS</option>
+                            <option value="inny">Inny</option>
+                        </select>
+                        <label for="poziom">Poziom zaawansowania</label>
+                        <select id="poziom" name="poziom">
+                            <option value="poczatkujacy" selected>Początkujący</option>
+                            <option value="sredniozaawansowany">Średniozaawansowany</option>
+                            <option value="zaawansowany">Zaawansowany</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Języki programowania</legend>
+                        <div class="option-list">
+                            <label><input type="checkbox" name="jezyki" value="html"> HTML</label>
+                            <label><input type="checkbox" name="jezyki" value="javascript"> JavaScript</label>
+                            <label><input type="checkbox" name="jezyki" value="python"> Python</label>
+                            <label><input type="checkbox" name="jezyki" value="cpp"> C++</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Obszary zainteresowań</legend>
+                        <div class="option-list">
+                            <label><input type="checkbox" name="zainteresowania" value="strony"> Strony internetowe</label>
+                            <label><input type="checkbox" name="zainteresowania" value="gry"> Gry komputerowe</label>
+                            <label><input type="checkbox" name="zainteresowania" value="sprzet"> Sprzęt komputerowy</label>
+                        </div>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Preferencje / ankiety — wybierz jedną opcję</legend>
+                        <div class="inline-options">
+                            <label><input type="radio" name="status" value="uczen" checked> Uczeń</label>
+                            <label><input type="radio" name="status" value="nauczyciel"> Nauczyciel</label>
+                            <label><input type="radio" name="status" value="absolwent"> Absolwent</label>
+                            <label><input type="radio" name="status" value="gosc"> Gość</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Pora spotkania — wybierz jedną opcję</legend>
+                        <div class="option-list">
+                            <label><input type="radio" name="pora" value="rano"> Rano</label>
+                            <label><input type="radio" name="pora" value="popoludnie"> Po południu</label>
+                            <label><input type="radio" name="pora" value="wieczorem"> Wieczorem</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Czy programujesz? — wybierz jedną odpowiedź</legend>
+                        <div class="option-list">
+                            <label><input type="radio" name="programowanie" value="tak"> Tak</label>
+                            <label><input type="radio" name="programowanie" value="nie"> Nie</label>
+                            <label><input type="radio" name="programowanie" value="nie_wiem"> Nie wiem</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Ocena umiejętności — wybierz jedną ocenę</legend>
+                        <div class="inline-options">
+                            <label><input type="radio" name="ocena" value="1"> 1</label>
+                            <label><input type="radio" name="ocena" value="2"> 2</label>
+                            <label><input type="radio" name="ocena" value="3"> 3</label>
+                            <label><input type="radio" name="ocena" value="4"> 4</label>
+                            <label><input type="radio" name="ocena" value="5"> 5</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Uwagi i propozycje</legend>
+                        <label for="uwagi">Napisz dodatkowe informacje:</label>
+                        <textarea id="uwagi" name="uwagi"></textarea>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Sprzęt komputerowy</legend>
+                        <div class="inline-options">
+                            <label><input type="checkbox" name="sprzet" value="laptop" checked> Laptop</label>
+                            <label><input type="checkbox" name="sprzet" value="pendrive"> Pendrive</label>
+                            <label><input type="checkbox" name="sprzet" value="sluchawki"> Słuchawki</label>
+                            <label><input type="checkbox" name="sprzet" value="klawiatura"> Klawiatura</label>
+                            <label><input type="checkbox" name="sprzet" value="mysz"> Mysz</label>
+                        </div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="actions">
+                    <input id="informationButton" type="button" value="INFORMACJA">
+                    <input type="submit" value="WYŚLIJ">
+                    <input id="statusButton" type="button" value="SPRAWDŹ STATUS">
+                    <input type="reset" value="CZYŚĆ">
+                    <p id="statusMessage" aria-live="polite"></p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <a class="back-link" href="index.html">Wróć</a>
 
      </body> 
 </html>
