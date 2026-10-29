@@ -1,267 +1,402 @@
-<!DOCTYPE html> 
-<html lang="pl-PL"> 
-<html> 
-     <head> 
-             <meta charset="utf-8"> 
-             <title> Formularz Rolski </title> 
-     </head> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formularz Rolski </title>
 
-     <body> 
-<A HREF="index.html"> Wróć </A> 
+    <style>
+        body {
+            background-color: #252525;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 30px 10px;
+        }
 
-<br><br><br>
-Tutaj będzie formularz <br> <br>
+        input, select, textarea, button {
+            font-family: Arial, sans-serif;
+        }
 
-[formularz] <br> <br>
+        @media (max-width: 550px) {
+            .kolumny {
+                grid-template-columns: 1fr !important;
+            }
 
+            .proby {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
 
-zobaczmy <br> <br> <br>
+<body>
 
-
-
-          
-<!-- z instrukcji -->
-
-<br><br><br>
-<br><br><br>
-<br><br><br>
-
-<body bgcolor="#87CEFA"> 
-<center><h1> Formularz o.................zaproponowany przez nauczyciela</h1></center> 
-<form enctype="text/plain" action="mailto:mkryniew@wp.pl" subject="formularz_dane" method="Post"> 
-  <TABLE> 
- <TR height="100"> 
-                          <TD width="500">  
-                               <b>Imię</b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-&nbsp  
-&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input name="imie" size="22">  
-                               <br><br> 
-                               <b>Drugie imię</b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  
-&nbsp &nbsp &nbsp &nbsp <input name="drugie" size="22">  
-                               <br><br> 
-                             <b>Nazwisko </b> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-&nbsp &nbsp &nbsp <input name="nazwisko" size="22">  
-                               <br><br> 
-                             <b>Pseudonim artystyczny</b>&nbsp &nbsp<input name="login" size="22"><nobr> 
-<br>  
-                           </TD>  
-                          <TD width="300" >  
-<center><font size="5" color="red"><b>Podaj środek lokomacji dojazdu do 
-pracy</b></font></center><br> 
-                            <center>  <select> 
-                                 <option value="autobus">Autobus</option> 
-                                 <option value="motocykl">Motocykl</option> 
-                                 <option value="prom">Prom</option> 
-                                 <option value="samolot">Samolot</option> 
-                                 <option value="lodz">Łódź podwodna</option> 
-                                 <option value="kajak">Kajak</option> 
-                              </select> </center> 
-                           </TD>  
-                          <TD width="500">Jaka jest Twoja ulubione ciastko? 
- <br><br> 
- <input type="checkbox" name="ciastko" value="k"> BEZA 
- <br><br> 
- <input type="checkbox" name="ciastko" value="m"> SERNIK 
- <br><br> 
- <input type="checkbox" name="ciastko" value="inna"> INNE 
- <br><br><br> 
- 
- <nobr>Jeśli zaznaczyłeś INNE to podaj swoje ciastko<br>wpisz ciastko poniżej. Maks: 
-100<br>znaków</nobr> 
- <br><br> 
- <input name="inna" size="25" maxlength="100"> 
-  </TD> 
-        </TR> 
- <TR height="200"> 
-                          <TD><nobr>Czy umiesz programować?</nobr> 
- <br><br> 
- <input type="radio" name="pyt3" value="tak"> Tak 
- <br><br> 
- <input type="radio" name="pyt3" value="nie"> Nie   
-<br><br> 
- <input type="radio" name="pyt3" value="tak"> Nie wiem  <br> <br> <b> W polu poniżej <br>Wpisz 
-opinię na temat pogody</b>  <textarea cols="50" rows="4"></textarea>     </TD>  
-                          <TD>podaj czas  &nbsp &nbsp &nbsp &nbsp<input type="time"><br>  
-                              podaj datę  &nbsp &nbsp &nbsp&nbsp &nbsp<input type="date"> <br>    
-                              wybierz kolor  &nbsp &nbsp<input type="color"> <br>   </TD>  
-                          <TD>  jaka jest wilgotność   <input type="range"> <br> 
-                                 Proszę czekać...&nbsp &nbsp &nbsp &nbsp <progress>Proszę 
-czekać...</progress>            </TD> 
-        </TR> 
-  <TR height="100"> 
-           <TD><button onclick="alert('A kuku')" style="height:80px;width:300px">Przycisk 
-niespodzianka</button></TD>  
-           <TD><nobr><input type="reset" value="Reset" style="height:80px; width:150px">                    
-</TD>  
-           <TD> <input type="submit" value"=Wyślij formularz" style="height:80px; width:150px"> </TD> 
-        </TR> 
-  </TABLE> 
-</form> 
- </body> 
-</html>
+<A HREF="index.html"> Wróć </A> <br> <br>
 
 
 
 
+<!-- FORMULARZ -->
+     
+<form id="formularz" style="
+    background-color: #e8e6dc;
+    max-width: 750px;
+    margin: auto;
+    padding: 25px;
+    border: 1px solid #aaa;
+    box-sizing: border-box;
+">
+
+    <!-- TYTUŁ -->
+    <h1 style="text-align: center; font-size: 25px; font-weight: normal; margin: 0;">
+        ZGŁOSZENIE DO ZESPOŁU METALOWEGO
+        <span style="font-size: 20px;">🎸</span>
+    </h1>
+
+    <p style="text-align: center; font-style: italic; margin-bottom: 20px;">
+        Formularz dla kandydatów
+    </p>
 
 
+    <!-- DANE OSOBOWE -->
+    <section style="border: 1px solid #777; padding: 12px; margin-bottom: 14px;">
 
-          
+        <h2 style="font-size: 21px; font-weight: normal; margin-top: 0;">
+            DANE OSOBOWE
+        </h2>
 
-<!-- Ai Formularz Artema --> 
+        <div class="kolumny" style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 25px;
+        ">
 
-<br><br><br>
-<br><br><br>
-<br><br><br>
-          
-<h1>Formularz rejestracji do Szkolnego Klubu Programistycznego</h1>
-    <form id="registrationForm" action="mailto:mkryniew@ids.gda.pl?subject=Proskura" method="post" enctype="text/plain">
-        <table>
-            <tbody>
-            <tr>
-                <td>
-                    <fieldset>
-                        <legend>Dane uczestnika</legend>
-                        <label class="text-field" for="imie">
-                            <span>Imię *</span>
-                            <input id="imie" name="imie" type="text" required>
-                        </label>
-                        <label class="text-field" for="nazwisko">
-                            <span>Nazwisko *</span>
-                            <input id="nazwisko" name="nazwisko" type="text" value="Proskura" required>
-                        </label>
-                        <label class="text-field" for="pseudonim">
-                            <span>Pseudonim</span>
-                            <input id="pseudonim" name="pseudonim" type="text" maxlength="20">
-                        </label>
-                        <label class="text-field" for="haslo">
-                            <span>Hasło *</span>
-                            <input id="haslo" name="haslo" type="password" required>
-                        </label>
-                        <label class="text-field" for="miejscowosc">
-                            <span>Miejscowość</span>
-                            <input id="miejscowosc" name="miejscowosc" type="text">
-                        </label>
-                    </fieldset>
+            <div>
+                <label for="imie">Imię</label>
+                <input type="text" id="imie" name="imie" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Wybór kategorii</legend>
-                        <label for="klasa">Klasa</label>
-                        <select id="klasa" name="klasa">
-                            <option value="1P_2" selected>1P_2</option>
-                            <option value="1P_1">1P_1</option>
-                            <option value="1P_3">1P_3</option>
-                            <option value="2P_1">2P_1</option>
-                            <option value="2P_2">2P_2</option>
-                        </select>
-                        <label for="system">System operacyjny</label>
-                        <select id="system" name="system">
-                            <option value="windows">Windows</option>
-                            <option value="linux">Linux</option>
-                            <option value="macos">macOS</option>
-                            <option value="inny">Inny</option>
-                        </select>
-                        <label for="poziom">Poziom zaawansowania</label>
-                        <select id="poziom" name="poziom">
-                            <option value="poczatkujacy" selected>Początkujący</option>
-                            <option value="sredniozaawansowany">Średniozaawansowany</option>
-                            <option value="zaawansowany">Zaawansowany</option>
-                        </select>
-                    </fieldset>
+            <div>
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" id="nazwisko" name="nazwisko" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Języki programowania</legend>
-                        <div class="option-list">
-                            <label><input type="checkbox" name="jezyki" value="html"> HTML</label>
-                            <label><input type="checkbox" name="jezyki" value="javascript"> JavaScript</label>
-                            <label><input type="checkbox" name="jezyki" value="python"> Python</label>
-                            <label><input type="checkbox" name="jezyki" value="cpp"> C++</label>
-                        </div>
-                    </fieldset>
+            <div>
+                <label for="wiek">Wiek</label>
+                <input type="number" id="wiek" name="wiek" min="1" max="120" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Obszary zainteresowań</legend>
-                        <div class="option-list">
-                            <label><input type="checkbox" name="zainteresowania" value="strony"> Strony internetowe</label>
-                            <label><input type="checkbox" name="zainteresowania" value="gry"> Gry komputerowe</label>
-                            <label><input type="checkbox" name="zainteresowania" value="sprzet"> Sprzęt komputerowy</label>
-                        </div>
-                    </fieldset>
-                </td>
-                <td>
-                    <fieldset>
-                        <legend>Preferencje / ankiety — wybierz jedną opcję</legend>
-                        <div class="inline-options">
-                            <label><input type="radio" name="status" value="uczen" checked> Uczeń</label>
-                            <label><input type="radio" name="status" value="nauczyciel"> Nauczyciel</label>
-                            <label><input type="radio" name="status" value="absolwent"> Absolwent</label>
-                            <label><input type="radio" name="status" value="gosc"> Gość</label>
-                        </div>
-                    </fieldset>
+            <div>
+                <label for="miasto">Miasto</label>
+                <input type="text" id="miasto" name="miasto" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Pora spotkania — wybierz jedną opcję</legend>
-                        <div class="option-list">
-                            <label><input type="radio" name="pora" value="rano"> Rano</label>
-                            <label><input type="radio" name="pora" value="popoludnie"> Po południu</label>
-                            <label><input type="radio" name="pora" value="wieczorem"> Wieczorem</label>
-                        </div>
-                    </fieldset>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Czy programujesz? — wybierz jedną odpowiedź</legend>
-                        <div class="option-list">
-                            <label><input type="radio" name="programowanie" value="tak"> Tak</label>
-                            <label><input type="radio" name="programowanie" value="nie"> Nie</label>
-                            <label><input type="radio" name="programowanie" value="nie_wiem"> Nie wiem</label>
-                        </div>
-                    </fieldset>
+            <div>
+                <label for="telefon">Numer telefonu</label>
+                <input type="tel" id="telefon" name="telefon" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+            </div>
 
-                    <fieldset>
-                        <legend>Ocena umiejętności — wybierz jedną ocenę</legend>
-                        <div class="inline-options">
-                            <label><input type="radio" name="ocena" value="1"> 1</label>
-                            <label><input type="radio" name="ocena" value="2"> 2</label>
-                            <label><input type="radio" name="ocena" value="3"> 3</label>
-                            <label><input type="radio" name="ocena" value="4"> 4</label>
-                            <label><input type="radio" name="ocena" value="5"> 5</label>
-                        </div>
-                    </fieldset>
+        </div>
+    </section>
 
-                    <fieldset>
-                        <legend>Uwagi i propozycje</legend>
-                        <label for="uwagi">Napisz dodatkowe informacje:</label>
-                        <textarea id="uwagi" name="uwagi"></textarea>
-                    </fieldset>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <fieldset>
-                        <legend>Sprzęt komputerowy</legend>
-                        <div class="inline-options">
-                            <label><input type="checkbox" name="sprzet" value="laptop" checked> Laptop</label>
-                            <label><input type="checkbox" name="sprzet" value="pendrive"> Pendrive</label>
-                            <label><input type="checkbox" name="sprzet" value="sluchawki"> Słuchawki</label>
-                            <label><input type="checkbox" name="sprzet" value="klawiatura"> Klawiatura</label>
-                            <label><input type="checkbox" name="sprzet" value="mysz"> Mysz</label>
-                        </div>
-                    </fieldset>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" class="actions">
-                    <input id="informationButton" type="button" value="INFORMACJA">
-                    <input type="submit" value="WYŚLIJ">
-                    <input id="statusButton" type="button" value="SPRAWDŹ STATUS">
-                    <input type="reset" value="CZYŚĆ">
-                    <p id="statusMessage" aria-live="polite"></p>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </form>
-    <a class="back-link" href="index.html">Wróć</a>
 
-     </body> 
+    <!-- O TOBIE I MUZYCE -->
+    <section style="border: 1px solid #777; padding: 12px; margin-bottom: 14px;">
+
+        <h2 style="font-size: 21px; font-weight: normal; margin-top: 0;">
+            O TOBIE I MUZYCE
+        </h2>
+
+        <p>Na czym grasz?</p>
+
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+
+            <label>
+                <input type="checkbox" name="instrument" value="Gitara">
+                Gitara
+            </label>
+
+            <label>
+                <input type="checkbox" name="instrument" value="Bas">
+                Bas
+            </label>
+
+            <label>
+                <input type="checkbox" name="instrument" value="Perkusja">
+                Perkusja
+            </label>
+
+            <label>
+                <input type="checkbox" name="instrument" value="Wokal">
+                Wokal
+            </label>
+
+        </div>
+
+        <div style="margin-top: 12px;">
+
+            <label>
+                <input type="checkbox" id="inne" name="instrument" value="Inne">
+                Inne
+            </label>
+
+            <label for="inne-instrumenty">Jeśli inne, jakie?</label>
+
+            <input type="text" id="inne-instrumenty" name="inne-instrumenty"
+                style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+
+        </div>
+
+        <p>Jakie gatunki lubisz i grasz? (metal)</p>
+
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+
+            <label>
+                <input type="checkbox" name="gatunek" value="Thrash">
+                Thrash
+            </label>
+
+            <label>
+                <input type="checkbox" name="gatunek" value="Groove">
+                Groove
+            </label>
+
+            <label>
+                <input type="checkbox" name="gatunek" value="Doom">
+                Doom
+            </label>
+
+            <label>
+                <input type="checkbox" name="gatunek" value="Death">
+                Death
+            </label>
+
+        </div>
+
+        <div style="margin-top: 12px;">
+
+            <label for="inne-gatunki">Jeśli inne, jakie?</label>
+
+            <input type="text" id="inne-gatunki" name="inne-gatunki"
+                style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+
+        </div>
+    </section>
+
+
+    <!-- DOŚWIADCZENIE -->
+    <section style="border: 1px solid #777; padding: 12px; margin-bottom: 14px;">
+
+        <h2 style="font-size: 21px; font-weight: normal; margin-top: 0;">
+            DOŚWIADCZENIE
+        </h2>
+
+        <p>Jak długo grasz?</p>
+
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 12px;">
+
+            <label>
+                <input type="radio" name="doswiadczenie"
+                    value="Dopiero zaczynam" required>
+                Dopiero zaczynam
+            </label>
+
+            <label>
+                <input type="radio" name="doswiadczenie" value="1-3 lata">
+                1–3 lata
+            </label>
+
+            <label>
+                <input type="radio" name="doswiadczenie" value="Ponad 3 lata">
+                Ponad 3 lata
+            </label>
+
+        </div>
+
+        <p>Opisz swoje doświadczenie i inspiracje:</p>
+
+        <textarea id="opis" name="opis" required
+            style="
+                width: 100%;
+                height: 110px;
+                padding: 8px;
+                box-sizing: border-box;
+                resize: vertical;
+                background-color: transparent;
+                background-image: repeating-linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent 29px,
+                    #b9b7ad 30px
+                );
+                line-height: 30px;
+            "></textarea>
+
+        <div style="margin-top: 10px;">
+
+            <label for="nagranie">Link do nagrania</label>
+
+            <input type="url" id="nagranie" name="nagranie"
+                placeholder="(opcjonalnie)"
+                style="width: 100%; padding: 8px; box-sizing: border-box; background: transparent;">
+
+        </div>
+    </section>
+
+
+    <!-- PRÓBY -->
+    <section style="border: 1px solid #777; padding: 12px; margin-bottom: 14px;">
+
+        <h2 style="font-size: 21px; font-weight: normal; margin-top: 0;">
+            PRÓBY
+        </h2>
+
+        <div class="proby" style="
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 10px;
+            align-items: center;
+        ">
+
+            <label>Czy możliwe są spóźnienia?</label>
+
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+
+                <label>
+                    <input type="radio" name="spoznienia" value="Tak" required>
+                    Tak
+                </label>
+
+                <label>
+                    <input type="radio" name="spoznienia" value="Nie">
+                    Nie
+                </label>
+
+            </div>
+
+            <label for="termin">Kiedy możesz przychodzić?</label>
+
+            <select id="termin" name="termin" required
+                style="width: 100%; padding: 8px; background: transparent;">
+
+                <option value="">(wybierz)</option>
+                <option value="Dni robocze">Dni robocze</option>
+                <option value="Weekendy">Weekendy</option>
+                <option value="Popołudnia">Popołudnia</option>
+                <option value="Wieczory">Wieczory</option>
+                <option value="Elastycznie">Elastycznie</option>
+
+            </select>
+
+        </div>
+    </section>
+
+
+    <!-- REGULAMIN -->
+    <div style="margin-top: 15px;">
+
+        <label>
+            <input type="checkbox" id="regulamin" name="regulamin" required>
+            Akceptuję regulamin zespołu
+        </label>
+
+    </div>
+
+
+    <!-- PRZYCISKI -->
+    <div style="display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+
+        <button type="reset"
+            style="padding: 10px 14px; background: transparent; border: 1px solid #555; cursor: pointer;">
+            WYCZYŚĆ
+        </button>
+
+        <button type="submit"
+            style="padding: 10px 14px; background: transparent; border: 1px solid #555; cursor: pointer;">
+            WYŚLIJ ZGŁOSZENIE
+        </button>
+
+    </div>
+
+    <p style="text-align: center; font-size: 12px; margin-top: 12px;">
+        Źródło: Nikodem Rolski
+    </p>
+
+</form>
+
+
+<!-- SPRAWDZANIE WYMAGANYCH ODPOWIEDZI -->
+<script>
+
+    const formularz = document.getElementById("formularz");
+
+    const inne = document.getElementById("inne");
+    const innePole = document.getElementById("inne-instrumenty");
+
+    // Pole "Jeśli inne, jakie?" jest wymagane tylko po zaznaczeniu "Inne".
+    function sprawdzInne() {
+        innePole.required = inne.checked;
+    }
+
+    inne.addEventListener("change", sprawdzInne);
+    sprawdzInne();
+
+
+    // Sprawdzanie formularza przed wysłaniem.
+    formularz.addEventListener("submit", function(event) {
+
+        const instrumenty = document.querySelectorAll(
+            'input[name="instrument"]:checked'
+        );
+
+        const gatunki = document.querySelectorAll(
+            'input[name="gatunek"]:checked'
+        );
+
+        const opis = document.getElementById("opis").value.trim();
+
+        if (instrumenty.length === 0) {
+            event.preventDefault();
+            alert("Zaznacz przynajmniej jeden instrument.");
+            return;
+        }
+
+        if (gatunki.length === 0) {
+            event.preventDefault();
+            alert("Zaznacz przynajmniej jeden gatunek muzyczny.");
+            return;
+        }
+
+        if (opis.length === 0) {
+            event.preventDefault();
+            alert("Opisz swoje doświadczenie i inspiracje.");
+            document.getElementById("opis").focus();
+            return;
+        }
+
+        // Formularz jest demonstracyjny i nie ma jeszcze serwera.
+        event.preventDefault();
+
+        alert(
+            "Formularz został poprawnie wypełniony. " +
+            "Wysyłanie zgłoszeń na serwer nie jest jeszcze skonfigurowane."
+        );
+
+    });
+
+</script>
+
+</body>
 </html>
