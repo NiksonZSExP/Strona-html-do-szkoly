@@ -32,22 +32,36 @@
 
 <body>
 
-<A HREF="index.html"> Wróć </A> <br> <br>
+    
+<A HREF="index.html"> Wróć </A> <br>
 
 
 
 
-<!-- FORMULARZ -->
+    <!-- FORMULARZ -->
      
-<form id="formularz" style="
-    background-color: #e8e6dc;
-    max-width: 750px;
-    margin: auto;
-    padding: 25px;
-    border: 1px solid #aaa;
-    box-sizing: border-box;
+<form id="formularz"
+    action="https://formsubmit.co/sigmyrolloivlad@gmail.com"
+    method="POST"
+    style="
+        background-color: #e8e6dc;
+        max-width: 750px;
+        margin: auto;
+        padding: 25px;
+        border: 1px solid #aaa;
+        box-sizing: border-box;
 ">
 
+    
+    <!-- dotyczy wysyłania -->
+    <input type="hidden" name="_subject"
+    value="Nowe zgłoszenie do zespołu metalowego">
+
+    <input type="hidden" name="_template" value="table">
+
+
+    
+ 
     <!-- TYTUŁ -->
     <h1 style="text-align: center; font-size: 25px; font-weight: normal; margin: 0;">
         ZGŁOSZENIE DO ZESPOŁU METALOWEGO
@@ -185,7 +199,7 @@
 
             <label>
                 <input type="checkbox" name="gatunek" value="Black">
-                Death
+                Black
             </label>
 
         </div>
@@ -343,6 +357,7 @@
 </form>
 
 
+    
 <!-- SPRAWDZANIE WYMAGANYCH ODPOWIEDZI -->
 <script>
 
@@ -391,14 +406,6 @@
             document.getElementById("opis").focus();
             return;
         }
-
-        // Formularz jest demonstracyjny i nie ma jeszcze serwera.
-        event.preventDefault();
-
-        alert(
-            "Formularz został poprawnie wypełniony. " +
-            "Wysyłanie zgłoszeń na serwer nie jest jeszcze skonfigurowane."
-        );
 
     });
 
